@@ -32,8 +32,15 @@ public class Album implements Serializable {
     private Date creationDate;  
      
     @NotNull
+    @ManyToOne
     private SempicUser owner;
+    
+//    @OneToMany(mappedBy="album", fetch=FetchType.LAZY)
+//    private List<Picture> pictures
 
+    protected Album(){
+    } 
+    
     public long getId() {
         return id;
     }
